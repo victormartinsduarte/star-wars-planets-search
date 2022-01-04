@@ -1,5 +1,4 @@
 import React from 'react';
-// import PlanetsContext from '../context/PlanetsContext';
 import TableInfo from './TableInfo';
 
 const tHeadColumns = ['Name', 'Rotation Period', 'Orbital Period', 'Diameter',
@@ -7,7 +6,6 @@ const tHeadColumns = ['Name', 'Rotation Period', 'Orbital Period', 'Diameter',
   'Films', 'Created', 'Edited', 'URL'];
 
 export default function Table() {
-
   return (
     <table>
       <thead>

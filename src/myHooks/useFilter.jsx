@@ -3,6 +3,7 @@ import { useState } from 'react';
 const INITIAL_FILTER = {
   filters: {
     filterByName: {},
+    filterByNumericValues: [],
   },
 };
 
@@ -20,5 +21,19 @@ export default function useFilter() {
       },
     });
   };
-  return [nameFilter, filterObj, setFilter];
+
+  const numberFilter = (value) => {
+    setFilter({
+      filters:
+      {
+        ...filterObj.filters,
+        filterByNumericValues: [
+          ...filterObj.filters.filterByNumericValues,
+          { ...value },
+        ],
+      },
+    });
+  };
+
+  return [nameFilter, numberFilter, filterObj, setFilter];
 }
